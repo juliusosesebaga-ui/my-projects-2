@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1781567054931,
+    "type": "api_error",
+    "phone": "254700000000",
+    "error": "Expected 1 '.' in the input between the postcard and the payload",
+    "timestamp": "2026-06-15T23:44:14.931Z",
+    "read": false
+  }
+]

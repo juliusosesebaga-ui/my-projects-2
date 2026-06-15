@@ -1,0 +1,17 @@
+{
+  "254700000000": {
+    "phone": "254700000000",
+    "stage": "greeting",
+    "collectedFields": {
+      "problemType": null,
+      "location": null,
+      "urgency": null,
+      "photoProvided": false
+    },
+    "createdAt": "2026-06-15T23:44:14.654Z",
+    "updatedAt": "2026-06-15T23:44:14.654Z",
+    "messages": [],
+    "lastMessage": "My bathroom sink is overflowing with water",
+    "hasPhoto": false
+  }
+}
