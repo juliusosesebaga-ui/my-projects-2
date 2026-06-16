@@ -1,7 +1,8 @@
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 
-const SESSIONS_FILE = path.join(__dirname, 'sessions.json');
+const SESSIONS_FILE = path.join(os.tmpdir(), 'sessions.json');
 
 // Simple in-memory + file-based session store
 let sessionsCache = {};

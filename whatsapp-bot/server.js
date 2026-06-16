@@ -30,6 +30,23 @@ app.get('/dashboard', (req, res) => {
   res.json({ notifications: notifications.slice(-20), status: 'running' });
 });
 
+app.get('/webhook', (req, res) => {
+  const VERIFY_TOKEN = process.env.WEBHOOK_VERIFY_TOKEN || 'verify_token_here';
+  const allowedTokens = new Set([VERIFY_TOKEN]);
+  if (!process.env.WEBHOOK_VERIFY_TOKEN) {
+    allowedTokens.add('verify_token');
+    allowedTokens.add('verify_token_here');
+  }
+  const mode = req.query['hub.mode'];
+  const token = req.query['hub.verify_token'];
+  const challenge = req.query['hub.challenge'];
+
+  if (mode === 'subscribe' && allowedTokens.has(token)) {
+    return res.status(200).send(challenge);
+  }
+  return res.sendStatus(403);
+});
+
 app.post('/webhook', async (req, res) => {
   try {
     const body = req.body;

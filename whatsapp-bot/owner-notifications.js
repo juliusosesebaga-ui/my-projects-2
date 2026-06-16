@@ -1,7 +1,8 @@
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 
-const NOTIFICATIONS_FILE = path.join(__dirname, 'notifications.json');
+const NOTIFICATIONS_FILE = path.join(os.tmpdir(), 'notifications.json');
 
 // Store notification in-memory and on disk
 async function sendOwnerNotification(notification) {

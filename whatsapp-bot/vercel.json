@@ -11,11 +11,5 @@
       "src": "/(.*)",
       "dest": "server.js"
     }
-  ],
-  "env": {
-    "OPENAI_API_KEY": "@openai_api_key",
-    "WA_TOKEN": "@wa_token",
-    "PHONE_NUMBER_ID": "@phone_number_id",
-    "WEBHOOK_VERIFY_TOKEN": "@webhook_verify_token"
-  }
+  ]
 }
